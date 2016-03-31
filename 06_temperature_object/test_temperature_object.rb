@@ -11,6 +11,10 @@ require 'temperature'
 class TestTemperature < MiniTest::Test
   # constructing with options hash with F
   # to_fahrenheit
+  def test_f_to_c
+    answer = f_to_c(-32)
+    assert_equal(0, answer)
+  end
 
   def test_initialize_fahrenheit
     assert_equal 50, Temperature.new({:f => 50}).to_fahrenheit

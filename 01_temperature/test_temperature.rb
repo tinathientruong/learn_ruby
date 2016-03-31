@@ -26,12 +26,12 @@ class TestTemperature < MiniTest::Test
     assert_equal 20, ftoc(68)
   end
 
-  # Now this set of tests describes a different method,
+# Now this set of tests describes a different method,
   # not ftoc() anymore, but ctof().
   def test_ctof_converts_freezing_temperature
     assert_equal 32, ctof(0)
   end
-
+  #
   def test_ctof_converts_boiling_temperature
     assert_equal 212, ctof(100)
   end
@@ -39,7 +39,6 @@ class TestTemperature < MiniTest::Test
   def test_ctof_converts_arbitrary_temperature
     assert_equal 68, ctof(20)
   end
-
 end
 
 # Remember the difference between integers and floats:
